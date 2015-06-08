@@ -4,8 +4,7 @@
   "description": "Updates your package.json with the git SHA of the build getting deployed",
   "main": "index.js",
   "scripts": {
-    "test": "mocha",
-    "postinstall": "./bin/update-package ./package.json"
+    "test": "mocha"
   },
   "keywords": [
     "heroku",

@@ -36,6 +36,6 @@ Once the script is executed, the `package.json` file is updated to contain a `bu
   "dependencies": {
     "package-source-version": "1.0.0"
   },
-  "build": "591be5f18780594806caa6f7802db4a14f01587a"
+  "build": "cfd6857a2b7f55246091abe2ddc7556f9dd2c866"
 }
 ```
