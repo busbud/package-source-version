@@ -1,0 +1,25 @@
+{
+  "name": "package-source-version",
+  "version": "1.0.0",
+  "description": "Updates your package.json with the git SHA of the build getting deployed",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "postinstall": "./bin/update-package ./package.json"
+  },
+  "keywords": [
+    "heroku",
+    "git",
+    "sha",
+    "version",
+    "build",
+    "package",
+    "commit"
+  ],
+  "author": "Mike Gradek",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "3.0.0",
+    "mocha": "2.2.5"
+  }
+}

@@ -1,0 +1,35 @@
+#!/usr/bin/env node
+'use strict';
+
+var fs = require('fs');
+var self = require('../package.json');
+var path = require('path').resolve(process.cwd(), process.argv[2]);
+
+/**
+ *  Return an error message to the console and processes
+ */
+function fail(msg) {
+  console.error(self.name + ': ' + msg);
+  process.exit(1);
+}
+
+var packaj;
+try {
+  packaj = require(path);
+} catch (ex) {
+  fail(ex);
+}
+
+packaj.build = process.env.SOURCE_VERSION;
+
+if (packaj.build) {
+  fs.writeFile(path, JSON.stringify(packaj, null, 2), function(err) {
+    if (err) {
+      fail(err);
+    }
+
+    console.log(self.name + ': updated package.json\'s build to ' + packaj.build);
+  });
+} else {
+  console.log(self.name + ': no version specified by SOURCE_VERSION environment variable; package.json was not updated');
+}
