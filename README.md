@@ -1,9 +1,9 @@
-# Package Source Version
+# package-source-version
 This module can update your `package.json` file by adding a `build` property to it representing the latest commit SHA from source code.
 
 ## Installing
 
-  npm install package-source-version
+    npm install package-source-version
 
 ## Using
 Typically, this module would be used for a postinstall step in a build system, like that of Heroku. The app depending on this module would use it like so, in the `scripts` property, as a `postinstall` command.
